@@ -31,6 +31,8 @@ async function obterDadosdoCep(cepopt) {
 enviar.addEventListener('click', () => {
     const ceptext = input.value
     input.value = ''
-    obterDadosdoCep(ceptext)
+    if (ceptext.length === 8 && Number.isInteger(Number(ceptext))) {
+        obterDadosdoCep(ceptext)
+    }
 })
 
